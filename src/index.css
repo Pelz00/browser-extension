@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+}
+
+.app{
+    padding: 3rem 8rem;
+    background: linear-gradient(to bottom, #050A1C, #060E27, #080F2D);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1F2535;
+    border-radius: 8px;
+    padding: 15px;
+    color: white;
+}
+
+nav button{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #2E364C;
+    border-radius: 8px;
+    border: none;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+section div{
+    display: flex;
+    gap: 10px;
+}
+
+section div button{
+    border-radius: 50px;
+    padding: 10px 15px;
+    background-color: #2F354C;
+    border:  .1px solid rgb(146, 144, 144);
+    color: white;
+    font-size: 17px;
+    font-weight: 550;
+}
+.activeBtn{
+    background-color: #F55954;
+    transition: .3s;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+}
+
+.grid .card{
+    color: white;
+    width: 340px;
+    border:  1px solid rgb(73, 72, 72);
+    background-color: #1F2535;
+    padding: 15px;
+    padding-top: 0;
+    border-radius: 15px;
+}
+
+.card .top{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card .bottom{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .bottom button{
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid rgb(105, 103, 103);
+    padding: 8px 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.bottom .toggle {
+    background-color: #535869;
+    width: 38px;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.toggle.active{
+    background-color: #F55954;
+}
+
+.bottom .toggle .circle{
+    background-color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    position: absolute;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.toggle.active .circle {
+  left: 20px;
+}
+
+
+
+/* WHITE MODE */
+.on{
+    background: linear-gradient(to bottom, #EDF3FD, #EDF6FB, #E4EFF4);
+    background-repeat: no-repeat;
+    color: #080F2D;
+    padding: 3rem 8rem;
+    min-height: 100vh;
+}
+
+.on nav{
+  background-color: white;
+}
+
+.on nav button{
+    padding: 10px;
+    background-color: #EFF0F0;
+    border-radius: 8px;
+    border: none;
+}
+
+.on section h1{
+    color: #060E27;
+}
+
+.on section div button{
+    background-color: #FBFEFF;
+    border:  .1px solid rgb(146, 144, 144);
+    color: #060E27;
+}
+
+.on .activeBtn{
+    background-color: #F55954;
+}
+
+.on .card{
+    color: #060E27;
+    background-color: #FBFEFF;
+}
+
+.on .card .bottom button{
+    background-color: transparent;
+    border: 1px solid rgb(105, 103, 103);
+    color: #080F2D;
+}
+
+
+/* MEDIUM SCREEN */
+@media (max-width:780px) {
+    .app{
+    padding: 2.3rem;
+    }
+
+    .on{
+    padding: 2.3rem;    
+    }
+
+    .grid .card{
+    width: 300px;
+    }
+
+
+}
+
+    /* MOBILE SCREEN */
+@media (max-width:450px) {
+    .app{
+    padding: 2rem 1rem;
+    }
+    .on{
+    padding: 2rem 1rem;    
+    }
+
+    .grid{
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    width: 100%;
+    }
+
+    .grid .card{
+    width: 100%;
+    }
+
+    .card .bottom{
+    margin-top: 1rem;
+}
+
+    nav img{
+        width: 100px;
+    }
+    nav button{
+        padding: 10px;
+    }
+    nav button img{
+        width: fit-content;
+    }
+    
+    section{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    }
+
+}
