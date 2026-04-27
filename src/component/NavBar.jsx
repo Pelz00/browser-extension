@@ -1,4 +1,3 @@
-import { useState } from "react"
 import extLogo from "/src/images/logo.svg"
 import moon from '/src/images/icon-moon.svg'
 import sun from '/src/images/icon-sun.svg'
